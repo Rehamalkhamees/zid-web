@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>متجر سَنا</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Readex+Pro:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="store.html">
+      <span class="brand-mark">س</span>
+      <span><b>متجر سَنا</b><small>واجهة المتجر</small></span>
+    </a>
+    <div class="top-actions">
+      <nav class="tabs" aria-label="الصفحات">
+        <a class="tab" href="index.html">لوحة التاجر</a>
+        <a class="tab is-active" href="store.html" aria-current="page">واجهة المتجر</a>
+      </nav>
+      <button class="btn" id="cartBtn" type="button">السلة <span class="count" id="cartCount">0</span></button>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="store-hero">
+    <p class="eyebrow">عطور وعناية بلمسة سعودية</p>
+    <h1>روائح تبقى في البال</h1>
+    <p class="lead">اختر منتجك، واقرأ تجارب العملاء وردودنا عليها قبل ما تطلب.</p>
+  </section>
+
+  <p class="banner" id="trust" hidden></p>
+
+  <div class="store-bar">
+    <h2>المنتجات</h2>
+    <select id="sortProducts" aria-label="ترتيب المنتجات">
+      <option value="featured">المميزة</option>
+      <option value="rating">الأعلى تقييمًا</option>
+      <option value="price-asc">الأقل سعرًا</option>
+      <option value="price-desc">الأعلى سعرًا</option>
+    </select>
+  </div>
+
+  <section class="grid" id="grid" aria-label="المنتجات"></section>
+</main>
+
+<div class="modal" id="productModal" hidden>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="pdTitle">
+    <button class="btn btn-sm sheet-close" type="button" data-close aria-label="إغلاق">✕</button>
+    <div id="pdInfo"></div>
+    <form class="review-form" id="reviewForm" novalidate>
+      <h3>اكتب تقييمك</h3>
+      <div class="star-pick" id="starPick" role="radiogroup" aria-label="عدد النجوم"></div>
+      <label class="field">اسمك
+        <input type="text" id="rvName" maxlength="40" autocomplete="name" placeholder="مثال: سلمى الحربي">
+      </label>
+      <label class="field">تجربتك مع المنتج
+        <textarea id="rvText" rows="3" maxlength="400" placeholder="وش عجبك؟ وش ما عجبك؟"></textarea>
+      </label>
+      <p class="form-error" id="rvError" role="alert" hidden></p>
+      <div><button class="btn btn-primary" type="submit">أرسل التقييم</button></div>
+    </form>
+  </div>
+</div>
+
+<div class="modal" id="cartModal" hidden>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="cartTitle" style="width:min(460px,100%)">
+    <button class="btn btn-sm sheet-close" type="button" data-close aria-label="إغلاق">✕</button>
+    <h2 id="cartTitle">سلة المشتريات</h2>
+    <div id="cartBody"></div>
+  </div>
+</div>
+
+<script src="app.js"></script>
+<script src="store.js"></script>
+</body>
+</html>

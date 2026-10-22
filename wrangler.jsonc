@@ -1,0 +1,9 @@
+// Cloudflare Worker that serves the store's static pages from ./public
+{
+  "name": "zid-new",
+  "compatibility_date": "2026-09-01",
+  "assets": {
+    "directory": "./public"
+  },
+  "workers_dev": true
+}

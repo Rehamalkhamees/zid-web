@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>مساعد ردود التقييمات</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Readex+Pro:wght@500;600;700&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">س</span>
+      <span><b>متجر سَنا</b><small>لوحة تحكم التاجر</small></span>
+    </a>
+    <nav class="tabs" aria-label="الصفحات">
+      <a class="tab is-active" href="index.html" aria-current="page">لوحة التاجر</a>
+      <a class="tab" href="store.html">واجهة المتجر</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="intro">
+    <p class="eyebrow">مساعد الرد على التقييمات</p>
+    <h1>ردّ مناسب لكل عميل، بضغطة زر</h1>
+    <p class="lead">المساعد يقرأ كل تقييم، يحدد شعور العميل وسبب ملاحظته، ويقترح ردًا يحفظ ثقته. راجعه، عدّله إذا تبي، وانشره في متجرك.</p>
+  </section>
+
+  <section class="kpis" id="kpis" aria-label="ملخص التقييمات"></section>
+
+  <div class="layout">
+    <section class="panel" aria-labelledby="reviewsTitle">
+      <div class="panel-head">
+        <div class="panel-title">
+          <h2 id="reviewsTitle">التقييمات</h2>
+          <div class="toolbar">
+            <select id="productFilter" aria-label="تصفية حسب المنتج"></select>
+          </div>
+        </div>
+        <div class="filters" id="filters" role="group" aria-label="تصفية التقييمات"></div>
+        <div class="toolbar">
+          <button class="btn btn-primary" id="bulkBtn" type="button">جهّز ردود لكل التقييمات المعلّقة</button>
+          <button class="btn" id="publishAllBtn" type="button" hidden></button>
+        </div>
+      </div>
+      <div class="review-list" id="list"></div>
+    </section>
+
+    <aside class="panel side" aria-labelledby="settingsTitle">
+      <h2 id="settingsTitle">ما يظهر في المتجر</h2>
+      <label class="switch"><input type="checkbox" id="setReplies"> إظهار ردودي تحت التقييمات</label>
+      <label class="switch"><input type="checkbox" id="setBadge"> إظهار شريط «التاجر يرد على التقييمات»</label>
+      <label class="field setting">ترتيب التقييمات في المتجر
+        <select id="setSort">
+          <option value="newest">الأحدث أولًا</option>
+          <option value="highest">الأعلى تقييمًا أولًا</option>
+          <option value="replied">اللي عليها رد أولًا</option>
+        </select>
+        <small>التقييمات المثبّتة تظهر دائمًا في الأعلى.</small>
+      </label>
+      <hr class="divider">
+      <h3>إعدادات المساعد</h3>
+      <label class="field setting">نبرة الرد الافتراضية
+        <select id="setTone">
+          <option value="friendly">ودّية (لهجة سعودية)</option>
+          <option value="formal">رسمية (فصحى)</option>
+        </select>
+      </label>
+      <label class="field setting">كود التعويض للتقييمات السلبية
+        <input type="text" id="setCoupon" maxlength="16" autocomplete="off">
+        <small>يضيفه المساعد تلقائيًا لما يكون العميل منزعج.</small>
+      </label>
+      <hr class="divider">
+      <h3>أداء المنتجات</h3>
+      <div class="perf" id="perf"></div>
+      <hr class="divider">
+      <button class="btn btn-ghost" id="resetBtn" type="button">إرجاع البيانات التجريبية</button>
+    </aside>
+  </div>
+
+  <p class="banner">
+    <span>البيانات التجريبية جاهزة في الصفحتين، وأي رد تنشره هنا يظهر مباشرة في واجهة المتجر.</span>
+    <a href="store.html">افتح واجهة المتجر ←</a>
+  </p>
+</main>
+
+<script src="app.js"></script>
+<script src="assistant.js"></script>
+<script src="dashboard.js"></script>
+</body>
+</html>
