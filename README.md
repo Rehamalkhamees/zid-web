@@ -8,24 +8,38 @@
 
 ## لقطات من الموقع
 
+الموقع يتبع وضع جهازك (فاتح أو داكن)، واللقطات هنا تظهر بنفس وضع GitHub عندك.
+
 ### لوحة التاجر
 المساعد حلّل تقييم عبدالله (تأخر التوصيل وما أحد رد عليه)، وجهّز له ردًا يعتذر ويضيف كود تعويض.
 
-![لوحة التاجر](docs/screenshots/dashboard.webp)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/dashboard-dark.webp">
+  <img alt="لوحة التاجر" src="docs/screenshots/dashboard.webp">
+</picture>
 
 ### واجهة المتجر
 المنتجات بصورها وأسعارها وتقييماتها، مع شريط يوضح إن التاجر يرد على التقييمات.
 
-![واجهة المتجر](docs/screenshots/store.webp)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/store-dark.webp">
+  <img alt="واجهة المتجر" src="docs/screenshots/store.webp">
+</picture>
 
 ### صفحة المنتج والتقييمات
 توزيع النجوم وتجارب العملاء، ورد المتجر ظاهر تحت كل تقييم، حتى التقييم السلبي.
 
-![صفحة المنتج والتقييمات](docs/screenshots/reviews.webp)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/reviews-dark.webp">
+  <img alt="صفحة المنتج والتقييمات" src="docs/screenshots/reviews.webp">
+</picture>
 
 ### السلة
 
-![السلة](docs/screenshots/cart.webp)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/screenshots/cart-dark.webp">
+  <img alt="السلة" src="docs/screenshots/cart.webp">
+</picture>
 
 ## لوحة التاجر
 
